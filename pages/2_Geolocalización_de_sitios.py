@@ -23,7 +23,7 @@ ciudad["Fecha_de_Proceso"] = "27-04-2023"
 st.header("Desafío final")
 st.info("#### Visualización de geolocalización de incendios forestales en la Región de Los Lagos")
 
-geo_puntos_comuna = ciudad[["kingdom", "phylum", "class", "order", "family", "genus", "species", "scientificName", "decimalLatitude", "decimalLongitude", "eventDate", "basisOfRecord", "Fecha_de_Proceso"]].rename(columns={
+geo_puntos_comuna = ciudad[["kingdom", "phylum", "class", "order", "family", "genus", "species", "scientificName", "decimalLatitude", "decimalLongitude", "eventDate", "day","month", "year", "basisOfRecord", "Fecha_de_Proceso"]].rename(columns={
     "kingdom": "Reino",
     "phylum": "Phylum",
     "class": "Clase",
@@ -35,6 +35,9 @@ geo_puntos_comuna = ciudad[["kingdom", "phylum", "class", "order", "family", "ge
     "decimalLatitude": "Latitud",
     "decimalLongitude": "Longitud",
     "eventDate": "Fecha_avistamiento",
+    "day": "Día",
+    "month": "Mes",
+    "year": "Año",
     "basisOfRecord": "Tipo_registro"
 })
 geo_puntos_comuna.dropna(subset=["Fecha_avistamiento"], inplace=True)
@@ -69,7 +72,7 @@ puntos_mapa = pdk.Deck(
         ),
     ],
     tooltip={
-        "html": "<b>Fecha de avistamiento: </b> {Fecha_avistamiento} <br/>"
+        "html": "<b>Mes de avistamiento: </b> {Mes} <br/>"
                 "<b> Especie: </b> {Especie} <br/>"
                 "<b>Tipo de registro: </b> {Tipo_registro} <br/>"
                 "<b>Georreferencia (Lat, Lng): </b> [{Latitud}, {Longitud}] <br/>"
