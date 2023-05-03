@@ -21,7 +21,7 @@ ciudad = carga_data()
 ciudad["Fecha_de_Proceso"] = "27-04-2023"
 
 st.header("Desafío final")
-st.info("#### Visualización de geolocalización de incendios forestales en la Región de Los Lagos")
+st.info("#### Visualización de geolocalización de avistamiento de Chucaos en Chile durnate el periordo comprendido entre los años 2021 a 2023")
 #Hasta aquí se encuentra operativo el código a la fecha del 29-04-23
 
 
@@ -64,7 +64,7 @@ group_mes.sort_values(axis="index", ascending=False, inplace=True)
 top5=group_mes[0:5]
 
 ##############################################################
-st.info("#### Cantidad de incendios forestales por Comuna en la Región de Los Lagos")
+st.info("#### Avistamiento de Chucaos en Chile.")
 
 col_sel, col_map = st.columns([1,2])
 
