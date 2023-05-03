@@ -74,9 +74,11 @@ geo_data = geo_puntos_visual
 if visualizacion_seleccionada:
   geo_data = geo_puntos_visual.query("Mes == @visualizacion_seleccionada")
 
+#Aplicar filtro de año
 if visualizacion_seleccionada2:
   geo_data = geo_puntos_visual.query("Año == @visualizacion_seleccionada2")
 
+#Aplicar ambos filtros al mismo tiempo
 if visualizacion_seleccionada and visualizacion_seleccionada2:
   geo_data = geo_puntos_visual[geo_puntos_visual['Mes'].isin(visualizacion_seleccionada) & geo_puntos_visual['Año'].isin(visualizacion_seleccionada2)]
 
