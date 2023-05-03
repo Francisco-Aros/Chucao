@@ -21,14 +21,16 @@ st.write("Para obtener más información sobre el Chucao, visita la página web 
 
 
 st.write("")
-st.write("Reportaje de 24 Horas, TVN")
+st.write("A continuación podrán apreciar un vídeo relacionado a diversas aves de neustro país y sus diferentes canticos, con el fin de poder diferenciarlos cuando nos encontremos en alguna visita o trabajo de campo.")
 
 components.html("""
-    <iframe width="900" height="500" 
-    src="https://www.youtube.com/embed/0TxME69JIrU" 
+    <iframe width="860" height="520" 
+    src="https://www.youtube.com/embed/kJf44ma0Rf8" 
     title="YouTube video player" frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen></iframe>
-""", height=520)
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; 
+    web-share" allowfullscreen></iframe>
+   """, height=520)
+
+ #Se pueden agregar dos videos de youtube en el código dentro del mismo components.html, tan solo agregando dos vinculos generados por Youtube
 
 st.write("Durante su navegación en esta página web podrá encontrar apartados con información mediante diversos gráficos realizados especialmente para esta ocación y mediante una visualización web.")
